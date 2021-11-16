@@ -1,0 +1,107 @@
+input,
+select {
+  border: 1px solid var(--black2);
+  height: 48px;
+  padding: 2px 12px 0px;
+  font-family: var(--fonts0);
+  letter-spacing: 0px;
+  color: var(--black0);
+  font-size: 1.8rem;
+  font-weight: 400;
+  width: 100%;
+}
+
+input:active,
+select:active,
+textarea:active {
+  box-shadow: 2px 2px 8px -1px rgba(0, 0, 0, 0.2);
+}
+
+input[type="checkbox"]:active {
+  box-shadow: none;
+}
+
+textarea {
+  resize: none;
+  border: 1px solid var(--black2);
+  height: 120px;
+  padding: 12px 12px 0px;
+  font-family: var(--fonts0);
+  letter-spacing: 0px;
+  color: var(--black0);
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-size: 1.8rem;
+  color: var(--black2);
+  letter-spacing: 0px;
+  font-family: var(--fonts0);
+  font-weight: 400;
+}
+
+select {
+  width: 100%;
+  padding-right: 48px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.selectBox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+}
+
+.selectBox .downArrow {
+  max-width: 24px;
+  position: absolute;
+  right: 16px;
+  bottom: 12px;
+}
+
+.labelAndInput {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.labelAndInput label {
+  margin-bottom: 8px;
+}
+
+.inputGrid {
+  display: flex;
+  justify-content: stretch;
+  flex-wrap: nowrap;
+  grid-gap: 24px;
+}
+
+input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+}
+
+.checkboxBox {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.checkboxBox label {
+  user-select: none;
+  position: relative;
+  top: 2px;
+  left: 12px;
+}
+
+input,
+textarea,
+select {
+  /* max-width: 800px; */
+}

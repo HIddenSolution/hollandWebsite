@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>dozer design system</title>
+    <link rel="stylesheet" href="styles/dozer/index.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <script src="/scripts/index.js" defer></script>
+  </head>
+  <body>
+    <div id="topBar">
+      <div class="logoContainer">
+        <img
+          src="/assets/logo.svg"
+          id="headerLogo"
+          alt="Holland Construction Logo"
+        />
+      </div>
+      <nav id="navigationLinks">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#faq">FAQ</a>
+        <a href="#instantQuote">Instant Quote</a>
+      </nav>
+      <img id="menuIcon" src="/assets/menuIcon.svg" alt="Menu Icon" />
+    </div>
+    <div id="smallScreenNavLinks">
+      <nav>
+        <a href="#home" class="activeLink">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#faq">FAQ</a>
+        <a href="#instantQuote">Instant Quote</a>
+      </nav>
+    </div>
+
+    <header id="home" class="sectionContainer darkTheme">
+      <div class="innerSectionContainer">
+        <div id="headerContent">
+          <h1>Lorem ipsum dolor sit amet, consectetur adipiscing.</h1>
+          <p id="introText">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Pellentesque volutpat risus felis, eget aliquet augue euismod vitae.
+            Vestibulum ut eleifend eros.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section id="services" class="sectionContainer">
+      <div class="innerSectionContainer">
+        <div class="sectionTitle">
+          <div class="subtitle">
+            <h3>Services</h3>
+          </div>
+          <div class="title">
+            <h1>All your landscaping needs.</h1>
+          </div>
+        </div>
+
+        <div id="serviceBlocksContainer">
+          <div class="serviceBlock">
+            <img src="/assets/texas.png" alt="mary jane" />
+            <div class="overlay">
+              <p class="serviceName">Tree Trimming</p>
+            </div>
+          </div>
+          <div class="serviceBlock">
+            <img src="/assets/texas.png" alt="mary jane" />
+            <div class="overlay">
+              <p class="serviceName">Tree Trimming</p>
+            </div>
+          </div>
+          <div class="serviceBlock">
+            <img src="/assets/texas.png" alt="mary jane" />
+            <div class="overlay">
+              <p class="serviceName">Tree Trimming</p>
+            </div>
+          </div>
+          <div class="serviceBlock">
+            <img src="/assets/texas.png" alt="mary jane" />
+            <div class="overlay">
+              <p class="serviceName">Tree Trimming</p>
+            </div>
+          </div>
+          <div class="serviceBlock">
+            <img src="/assets/texas.png" alt="mary jane" />
+            <div class="overlay">
+              <p class="serviceName">Tree Trimming</p>
+            </div>
+          </div>
+          <div class="serviceBlock">
+            <img src="/assets/texas.png" alt="mary jane" />
+            <div class="overlay">
+              <p class="serviceName">Tree Trimming</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="sectionContainer">
+      <div class="innerSectionContainer">
+        <div class="sectionTitle">
+          <div class="subtitle">
+            <h3>About</h3>
+          </div>
+          <div class="title">
+            <h1>Family owned and operated since 1921.</h1>
+          </div>
+        </div>
+
+        <div id="aboutGallery">
+          <!-- <div id="mainImageContainer">
+            <img
+              id="mainAboutImage"
+              src="/assets/aboutPicture.png"
+              alt="main image"
+            />
+          </div> -->
+
+          <div id="secondaryImageContainer">
+            <div class="secondaryAboutImage image0"></div>
+            <span class="spacer24"></span>
+            <div class="secondaryAboutImage image1"></div>
+          </div>
+        </div>
+
+        <div id="aboutContent">
+          <h4>That's like 100 years!</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Pellentesque volutpat risus felis, eget aliquet augue euismod vitae.
+            Vestibulum ut eleifend eros. Vivamus eu facilisis odio. Fusce
+            gravida et nisi non aliquet.
+          </p>
+          <br />
+          <p>
+            Pellentesque ut imperdiet quam. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Donec euismod velit vitae dolor luctus
+            scelerisque. Donec a augue eu justo dapibus aliquet in id eros.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="sectionContainer">
+      <div class="innerSectionContainer">
+        <div class="sectionTitle">
+          <div class="subtitle">
+            <h3>Contact</h3>
+          </div>
+          <div class="title">
+            <h1>Let’s talk about your needs.</h1>
+          </div>
+        </div>
+
+        <div id="sectionContent">
+          <div class="inputGrid">
+            <div class="labelAndInput">
+              <label for="contactFirstNameInput">First Name</label>
+              <input id="contactFirstNameInput" type="text" placeholder="Tom" />
+            </div>
+
+            <span class="spacer24"></span>
+
+            <div class="labelAndInput">
+              <label for="contactLastNameInput">Last Name</label>
+              <input
+                id="contactLastNameInput"
+                type="text"
+                placeholder="Collins"
+              />
+            </div>
+          </div>
+
+          <span class="spacer24"></span>
+
+          <div class="labelAndInput">
+            <label for="contactEmailAddressInput">Email Address</label>
+            <input
+              id="contactEmailAddressInput"
+              type="text"
+              placeholder="tom.collins@gmail.com"
+            />
+          </div>
+
+          <span class="spacer24"></span>
+
+          <div class="labelAndInput">
+            <label for="textareaInput">Message</label>
+            <textarea id="textareaInput" cols="10" rows="5"></textarea>
+          </div>
+
+          <span class="spacer24"></span>
+
+          <div id="contactSubmitContainer">
+            <button class="primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="sectionContainer">
+      <div class="innerSectionContainer">
+        <div class="sectionTitle">
+          <div class="subtitle">
+            <h3>Frequently Asked Questions</h3>
+          </div>
+          <div class="title">
+            <h1>If you’ve got a question, we’ve got an answer.</h1>
+          </div>
+        </div>
+
+        <div id="sectionContent"></div>
+      </div>
+    </section>
+
+    <section id="instantQuote" class="sectionContainer">
+      <div class="innerSectionContainer">
+        <div class="sectionTitle">
+          <div class="subtitle">
+            <h3>Quote Generator</h3>
+          </div>
+          <div class="title">
+            <h1>Get an instant quote.</h1>
+          </div>
+        </div>
+
+        <div id="sectionContent">
+          <div class="inputGrid">
+            <div class="labelAndInput">
+              <label for="quoteFirstNameInput">First Name</label>
+              <input id="quoteFirstNameInput" type="text" placeholder="Tom" />
+            </div>
+
+            <span class="spacer24"></span>
+
+            <div class="labelAndInput">
+              <label for="quoteLastNameInput">Last Name</label>
+              <input
+                id="quoteLastNameInput"
+                type="text"
+                placeholder="Collins"
+              />
+            </div>
+          </div>
+
+          <span class="spacer24"></span>
+
+          <div class="inputGrid">
+            <div class="labelAndInput">
+              <label for="quotePhoneNumber">Phone Number</label>
+              <input
+                id="quotePhoneNumber"
+                type="tel"
+                placeholder="1112223333"
+              />
+            </div>
+
+            <span class="spacer24"></span>
+
+            <div class="labelAndInput">
+              <label for="quoteEmailAddressInput">Email Address</label>
+              <input
+                id="quoteEmailAddressInput"
+                type="text"
+                placeholder="tom.collins@gmail.com"
+              />
+            </div>
+          </div>
+
+          <span class="spacer24"></span>
+
+          <div class="inputGrid">
+            <div class="labelAndInput selectBox">
+              <label for="preferredContactMethodSelect">Contact Method</label>
+              <img class="downArrow" src="/assets/downArrow.png" />
+              <select name="contactMethod" id="preferredContactMethodSelect">
+                <option value=""></option>
+                <option value="phone">Phone Call</option>
+                <option value="email">Email</option>
+                <option value="text">Text</option>
+              </select>
+            </div>
+
+            <span class="spacer24"></span>
+
+            <div class="labelAndInput selectBox">
+              <label for="serviceRequiredSelect">Service Requested</label>
+              <img class="downArrow" src="/assets/downArrow.png" />
+              <select name="pets" id="serviceRequiredSelect">
+                <option value=""></option>
+                <option value="tree">Tree Trimming</option>
+                <option value="shit">Shit Hauling</option>
+                <option value="wingman">Wingman at the Bar</option>
+              </select>
+            </div>
+          </div>
+
+          <span class="spacer24"></span>
+
+          <div class="labelAndInput checkboxBox">
+            <label for="checkboxInput">
+              Yes, it is okay to contact me regarding this quote using the
+              information I have provided.
+            </label>
+            <input id="checkboxInput" type="checkbox" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

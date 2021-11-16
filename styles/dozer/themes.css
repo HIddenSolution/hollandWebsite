@@ -1,0 +1,9 @@
+.darkTheme {
+  background: var(--black0);
+  color: var(--white0);
+}
+
+.lightTheme {
+  background: var(--white0);
+  color: var(--black0);
+}

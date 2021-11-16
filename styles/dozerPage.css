@@ -1,0 +1,124 @@
+header {
+  height: 100px;
+  padding: 12px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header h1 {
+  color: var(--green0);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  margin: 24px 0;
+  padding: 12px 24px;
+}
+
+.sectionTitle h2 span {
+  color: var(--green1);
+  display: inline-flex;
+}
+
+.sectionDescription {
+  display: flex;
+  margin: 24px 0px 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--white1);
+}
+
+.demos .demoLabel {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.demos .demoBlock:not(:first-of-type) {
+  margin-top: 36px;
+}
+
+/* #colors */
+
+#colors .demos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#colors .colorRow {
+  margin-bottom: 24px;
+  display: flex;
+  width: 100%;
+}
+
+#colors .colorBlock {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  margin-right: 16px;
+  padding: 12px;
+  width: 160px;
+  font-size: 14px;
+}
+
+#colors .colorBlock p span {
+  font-family: monospace;
+  margin-left: 8px;
+}
+
+#colors #black0Color {
+  background: var(--black0);
+}
+
+#colors #black0Color p {
+  color: var(--white0);
+}
+
+#colors #black1Color {
+  background: var(--black0);
+}
+
+#colors #black1Color p {
+  color: var(--white0);
+}
+
+#colors #green0Color {
+  background: var(--green0);
+  color: var(--black0);
+}
+
+#colors #green1Color {
+  background: var(--green1);
+  color: var(--black0);
+}
+
+#colors #white0Color {
+  background: var(--white0);
+  color: var(--black0);
+}
+
+#colors #white1Color {
+  background: var(--white1);
+  color: var(--black0);
+}
+
+/* #typography */
+
+/* Each row of typography demo. */
+#typography .demos span {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+#typography .demos .demoBlock {
+  margin-bottom: 24px;
+  max-width: 650px;
+}
+
+#buttons .demos {
+  display: flex;
+  align-items: center;
+  grid-gap: 24px;
+}
+
+#buttons .demoBlock {
+  margin-top: 0px;
+}

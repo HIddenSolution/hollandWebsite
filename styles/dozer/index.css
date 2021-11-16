@@ -1,0 +1,18 @@
+@import "./reset.css";
+@import "./fonts.css";
+@import "./variables.css";
+@import "./typography.css";
+@import "./themes.css";
+@import "./inputs.css";
+@import "./buttons.css";
+
+.sectionContainer {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.innerSectionContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}

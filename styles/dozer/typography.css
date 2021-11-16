@@ -1,0 +1,66 @@
+:root {
+  color: var(--black1);
+}
+
+/* typohraphy */
+
+h1 {
+  font-size: 4.8rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+  font-family: var(--fonts0);
+}
+
+h2 {
+  font-size: 3.6rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  font-family: var(--fonts0);
+}
+
+h3 {
+  font-size: 3.6rem;
+  font-weight: 500;
+  letter-spacing: -1px;
+  font-family: var(--fonts0);
+}
+
+h4 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  font-family: var(--fonts0);
+}
+
+h5 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  font-family: var(--fonts0);
+}
+
+p {
+  font-family: var(--fonts0);
+  line-height: 1.5;
+}
+
+.small {
+  font-style: italic;
+  font-size: 1.4rem;
+  font-family: var(--fonts0);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+a {
+  font-family: var(--fonts0);
+  color: var(--green2);
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+label {
+  font-family: var(--fonts0);
+  font-size: 1.6rem;
+  font-weight: 500;
+}

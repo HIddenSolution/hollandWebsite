@@ -1,0 +1,73 @@
+#serviceBlocksContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 32px 32px;
+  grid-template-areas:
+    ". . . . "
+    ". . ";
+}
+
+#serviceBlocksContainer .serviceBlock {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+#serviceBlocksContainer .serviceBlock img {
+  max-width: 100%;
+}
+
+#serviceBlocksContainer .serviceBlock .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: calc(100% - 4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#serviceBlocksContainer .serviceName {
+  text-align: center;
+  color: var(--white0);
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  user-select: none;
+  padding: 0px 16px;
+}
+
+/* styles for tablets or some shit */
+
+@media screen and (max-width: 900px) {
+  #serviceBlocksContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      ". ."
+      ". ."
+      ". .";
+  }
+}
+
+/* styles for phones or some shit */
+
+@media screen and (max-width: 570px) {
+  #serviceBlocksContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "."
+      "."
+      "."
+      "."
+      "."
+      ".";
+  }
+}
