@@ -22,3 +22,22 @@ section {
   height: 24px;
   display: inline-flex;
 }
+
+details,
+summary {
+  font-family: var(--fonts0);
+}
+
+summary {
+  font-weight: 700;
+  font-size: 20px;
+  margin: 24px 0px;
+  cursor: pointer;
+  user-select: none;
+}
+
+details {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}

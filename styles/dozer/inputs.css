@@ -84,6 +84,7 @@ select {
 input[type="checkbox"] {
   width: 24px;
   height: 24px;
+  min-width: 24px;
 }
 
 .checkboxBox {
@@ -104,4 +105,18 @@ input,
 textarea,
 select {
   /* max-width: 800px; */
+}
+
+@media screen and (max-width: 500px) {
+  .inputGrid {
+    flex-wrap: wrap;
+  }
+
+  .labelAndInput + .spacer24 {
+    display: none;
+  }
+
+  .spacer24.lilKeeper {
+    display: inline-flex !important;
+  }
 }

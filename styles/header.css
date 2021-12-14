@@ -53,7 +53,7 @@ header {
 }
 
 #smallScreenNavLinks nav a:last-child {
-  color: var(--green1);
+  /* color: var(--green1); */
 }
 
 #headerLogo {
@@ -77,11 +77,17 @@ header {
   color: var(--green0);
 }
 
-#topBar #menuIcon {
-  display: none;
+#topBar #menuIcon,
+#topBar #activeMenuIcon {
   max-width: 24px;
   position: absolute;
   right: 24px;
+  cursor: pointer;
+}
+
+#topBar #activeMenuIcon {
+  display: none;
+  z-index: 150;
 }
 
 #headerContent {
@@ -95,7 +101,7 @@ header {
 #introText {
   font-size: 2rem;
   line-height: 150%;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
 }
 
 /* styles for tablets or some shit */
@@ -112,5 +118,23 @@ header {
 
 /* styles for phones or some shit */
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 500px) {
+  #smallScreenNavLinks {
+    min-width: -webkit-fill-available;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    position: fixed;
+    padding: 48px 48px;
+    top: 0;
+    left: 0;
+  }
+
+  #smallScreenNavLinks nav a {
+    text-align: right;
+  }
+
+  #topBar #activeMenuIcon {
+    filter: invert(1);
+  }
 }

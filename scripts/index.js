@@ -6,15 +6,21 @@ setTimeout(() => {
 
 // Get the #menuIcon element.
 const menuIcon = document.getElementById('menuIcon')
+const activeMenuIcon = document.getElementById('activeMenuIcon')
 const smallScreenNavLinks = document.getElementById("smallScreenNavLinks")
 const allSections = document.querySelectorAll(".sectionContainer")
 const allSmallScreeNavLinkAnchors = document.querySelectorAll("#smallScreenNavLinks a")
 
-function toggleNavMenu() {
-  const currentDisplayValue = getComputedStyle(smallScreenNavLinks).display
+function toggleDisplayValue (targetElement) {
+  const currentDisplayValue = getComputedStyle(targetElement).display
   const isCurrentlyHidden = currentDisplayValue === 'none'
   const newValue =  isCurrentlyHidden ? "flex" : "none"
-  smallScreenNavLinks.style.display = newValue
+  targetElement.style.display = newValue
+}
+
+function toggleNavMenu() {
+  toggleDisplayValue(smallScreenNavLinks)
+  toggleDisplayValue(activeMenuIcon)
 }
 
 function dontScroll(event) {
@@ -25,6 +31,7 @@ function closeSmallNavLinks() {
   smallScreenNavLinks.style.display = "none"
 }
 
+activeMenuIcon.addEventListener('click', toggleNavMenu)
 menuIcon.addEventListener('click', toggleNavMenu)
 smallScreenNavLinks.addEventListener("mousewheel", dontScroll)
 
