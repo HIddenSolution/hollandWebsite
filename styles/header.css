@@ -1,9 +1,11 @@
 #home.sectionContainer {
   padding: 0px;
+  background: #032021ca;
 }
 
 header {
-  background: var(--black0);
+  background-image: url(/assets/truck.gif);
+  background-size: cover;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -136,5 +138,12 @@ header {
 
   #topBar #activeMenuIcon {
     filter: invert(1);
+  }
+}
+
+
+@media screen and (min-width: 860px) {
+  #topBar #menuIcon {
+    display: none;
   }
 }

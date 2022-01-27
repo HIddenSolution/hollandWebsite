@@ -41,3 +41,7 @@ details {
   font-size: 16px;
   line-height: 1.5;
 }
+
+[data-scrollable="false"] {
+  overflow: hidden;
+}

@@ -16,9 +16,10 @@
 
 #serviceBlocksContainer .serviceBlock img {
   max-width: 100%;
+  max-height: 100%;
 }
 
-#serviceBlocksContainer .serviceBlock .overlay {
+#serviceBlocksContainer .serviceBlock .innerBlock {
   position: absolute;
   top: 0;
   left: 0;
@@ -31,6 +32,20 @@
   justify-content: center;
   align-items: center;
 }
+
+#serviceBlocksContainer .serviceBlock .popup {
+  height: 100vh;
+  background: var(--white0);
+  padding: 24px 48px;
+  overflow: scroll;
+  z-index: 1000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  flex-direction: column;
+}
+
 
 #serviceBlocksContainer .serviceName {
   text-align: center;

@@ -1,10 +1,10 @@
 // 500ms after page loads,
-// clear the console.
+// clear th
 setTimeout(() => {
-  console.clear()
+  console.clear();
 }, 500)
 
-// Get the #menuIcon element.
+const html = document.querySelector('html')
 const menuIcon = document.getElementById('menuIcon')
 const activeMenuIcon = document.getElementById('activeMenuIcon')
 const smallScreenNavLinks = document.getElementById("smallScreenNavLinks")
@@ -18,9 +18,21 @@ function toggleDisplayValue (targetElement) {
   targetElement.style.display = newValue
 }
 
-function toggleNavMenu() {
+function getDisplayValue(targetElement) {
+  return getComputedStyle(targetElement).display
+}
+
+function toggleNavMenu(event) {
+  event.stopPropagation()
   toggleDisplayValue(smallScreenNavLinks)
   toggleDisplayValue(activeMenuIcon)
+  
+  const newDisplayValue = getDisplayValue(smallScreenNavLinks)
+  const isOpen = newDisplayValue === 'flex'
+
+  isOpen
+    ? document.addEventListener('click', handleDocumentClick)
+    : document.removeEventListener('click', handleDocumentClick)
 }
 
 function dontScroll(event) {
@@ -31,10 +43,39 @@ function closeSmallNavLinks() {
   smallScreenNavLinks.style.display = "none"
 }
 
+function handleDocumentClick(event) {
+  const isMenuOpen = smallScreenNavLinks.style.display === "flex"
+
+  if (isMenuOpen) {
+    const wasClickOutsideMenu = !smallScreenNavLinks.contains(event.target)
+    wasClickOutsideMenu && closeSmallNavLinks()
+  }
+}
+
 activeMenuIcon.addEventListener('click', toggleNavMenu)
 menuIcon.addEventListener('click', toggleNavMenu)
 smallScreenNavLinks.addEventListener("mousewheel", dontScroll)
 
 allSmallScreeNavLinkAnchors.forEach((anchorElement) => {
   anchorElement.addEventListener("click", closeSmallNavLinks)
+})
+
+// Handle service block clicks / popups.
+
+function toggleElementScrollable(targetElement) {
+  const isScrollable =  targetElement.getAttribute('data-scrollable')
+  const newValue = isScrollable ? 'false' : 'true'
+  targetElement.setAttribute('data-scrollable', newValue)
+}
+
+const serviceBlocks = document.querySelectorAll(".serviceBlock")
+
+function openServicePopup(event) {
+  const popupElement = event.currentTarget.querySelector('.popup')
+  toggleElementScrollable(html)
+  toggleDisplayValue(popupElement)
+}
+
+serviceBlocks.forEach((serviceBlock) => {
+  serviceBlock.addEventListener('click', openServicePopup)
 })

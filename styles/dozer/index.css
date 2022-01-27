@@ -16,3 +16,16 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.boxed {
+  border: 1px black ;
+  font-family: var(--fonts0);
+  font-size: 1.5rem;
+    line-height: 150%;
+    letter-spacing: 1px;
+    opacity: 0.75;
+    text-align: center;
+    padding: 64px 24px 48px;
+    font-size: 3rem;
+    font-weight: 525;
+}
