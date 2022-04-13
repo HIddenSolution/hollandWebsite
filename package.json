@@ -4,8 +4,8 @@
   "description": "This is a static template with no bundling",
   "main": "index.html",
   "scripts": {
-    "start": "serve",
-    "build": "echo This is a static template, there is no bundler or bundling involved!"
+    "dev": "serve",
+    "build": "npm -v"
   },
   "repository": {
     "type": "git",
