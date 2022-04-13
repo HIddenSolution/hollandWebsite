@@ -11,6 +11,7 @@
   <script src="https://unpkg.com/mobx/dist/mobx.umd.production.min.js"></script>
   <script src="/scripts/index.js" defer></script>
   <script src="/scripts/quotes.js" defer></script>
+  <script src="/scripts/contact.js" defer></script>
 </head>
 
 <body>
@@ -223,6 +224,10 @@ ready to help you with your next project!
         </div>
       </div>
 
+      <div id="contactSuccessMessage">
+        <p>Your message has been sent. :)</p>
+      </div>
+
       <div class="sectionContent">
         <div class="inputGrid">
           <div class="labelAndInput">
@@ -257,7 +262,7 @@ ready to help you with your next project!
         <span class="spacer24"></span>
 
         <div id="contactSubmitContainer">
-          <button class="primary">Submit</button>
+          <button id="contactFormButton" class="primary">Submit</button>
         </div>
       </div>
     </div>

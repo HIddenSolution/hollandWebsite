@@ -4,8 +4,7 @@
   "description": "This is a static template with no bundling",
   "main": "index.html",
   "scripts": {
-    "dev": "serve",
-    "build": "npm -v"
+    "start": "vercel dev"
   },
   "repository": {
     "type": "git",
@@ -24,6 +23,10 @@
   "homepage": "https://github.com/codesandbox-app/static-template#readme",
   "devDependencies": {
     "prettier": "^2.6.2",
-    "serve": "^11.2.0"
+    "serve": "^11.2.0",
+    "vercel": "^23.1.2"
+  },
+  "dependencies": {
+    "nodemailer": "^6.7.2"
   }
 }
