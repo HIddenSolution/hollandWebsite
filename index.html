@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-scrollable="true">
-
+<!-- share terminal? -->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +8,9 @@
   <title>dozer design system</title>
   <link rel="stylesheet" href="styles/dozer/index.css" />
   <link rel="stylesheet" href="styles/index.css" />
+  <script src="https://unpkg.com/mobx/dist/mobx.umd.production.min.js"></script>
   <script src="/scripts/index.js" defer></script>
+  <script src="/scripts/quotes.js" defer></script>
 </head>
 
 <body>
@@ -221,7 +223,7 @@ ready to help you with your next project!
         </div>
       </div>
 
-      <div id="sectionContent">
+      <div class="sectionContent">
         <div class="inputGrid">
           <div class="labelAndInput">
             <label for="contactFirstNameInput">First Name</label>
@@ -272,7 +274,7 @@ ready to help you with your next project!
         </div>
       </div>
 
-      <div id="sectionContent">
+      <div class="sectionContent">
         <details>
           <summary>How far do you haul and conduct business?</summary>
           We will haul as far as needed. The price up to 50 miles is calculated by the loaded mile.
@@ -286,7 +288,7 @@ ready to help you with your next project!
           any accidents from happening.
         </details>
         <details>
-          <summary>Do I need a permit to do my dirt wark?</summary>
+          <summary>Do I need a permit to do my dirt work?</summary>
           If you are inside city limits you may need to check your city's regulations. If you need
           work on or next to a state highway you will need to contact your nearest TX DOT.
       </div>
@@ -304,7 +306,7 @@ ready to help you with your next project!
         </div>
       </div>
 
-      <div id="sectionContent">
+      <div class="sectionContent step">
         <div class="inputGrid">
           <div class="labelAndInput">
             <label for="quoteFirstNameInput">First Name</label>
@@ -323,8 +325,8 @@ ready to help you with your next project!
 
         <div class="inputGrid">
           <div class="labelAndInput">
-            <label for="quotePhoneNumber">Phone Number</label>
-            <input id="quotePhoneNumber" type="tel" placeholder="1112223333" />
+            <label for="quotePhoneNumberInput">Phone Number</label>
+            <input id="quotePhoneNumberInput" type="tel" placeholder="1112223333" />
           </div>
 
           <span class="spacer24"></span>
@@ -339,9 +341,9 @@ ready to help you with your next project!
 
         <div class="inputGrid">
           <div class="labelAndInput selectBox">
-            <label for="preferredContactMethodSelect">Contact Method</label>
+            <label for="contactMethodSelect">Contact Method</label>
             <img class="downArrow" src="/assets/downArrow.png" />
-            <select name="contactMethod" id="preferredContactMethodSelect">
+            <select name="contactMethod" id="contactMethodSelect">
               <option value=""></option>
               <option value="phone">Phone Call</option>
               <option value="email">Email</option>
@@ -352,9 +354,9 @@ ready to help you with your next project!
           <span class="spacer24"></span>
 
           <div class="labelAndInput selectBox">
-            <label for="serviceRequiredSelect">Service Requested</label>
+            <label for="serviceSelect">Service Requested</label>
             <img class="downArrow" src="/assets/downArrow.png" />
-            <select name="pets" id="serviceRequiredSelect">
+            <select name="pets" id="serviceSelect">
               <option value=""></option>
               <option value="tree">Tree Trimming</option>
               <option value="shit">Shit Hauling</option>
@@ -376,11 +378,42 @@ ready to help you with your next project!
         <span class="spacer24 lilKeeper"></span>
 
         <div id="contactSubmitContainer">
-          <button class="primary">Submit</button>
+          <button class="primary nextButton">Next Step (1/3)</button>
+        </div>
+      </div>
+
+      <div class="sectionContent step">
+        <h2>ur on step 2!!! go forth and conquer</h2>
+
+        <div id="contactSubmitContainer">
+          <button class="primary nextButton">Next Step (2/3)</button>
+          <button class="primary backButton">Back</button>
+        </div>
+      </div>
+
+      <div class="sectionContent step">
+        <h2>ur on step 3!!! u basically dun bruh</h2>
+
+        <div id="contactSubmitContainer">
+          <button class="primary backButton">Back</button>
         </div>
       </div>
     </div>
   </section>
+  <!-- <section id="foobar" class="sectionContainer">
+    <div class="yolo" style="background: red">
+      <button class="primary nextButton">Next Step (1/3)</button>
+    </div>
+    <div class="yolo" style="background: blue">
+      <button class="primary nextButton">Next Step (2/3)</button>
+      <button class="primary backButton">Back</button>
+    </div>
+    <div class="yolo" style="background: pink">
+      <button class="primary nextButton">Next Step (3/3)</button>
+      <button class="primary backButton">Back</button>
+
+    </div>
+  </section> -->
 </body>
 
 </html>

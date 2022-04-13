@@ -46,6 +46,10 @@
   flex-direction: column;
 }
 
+#serviceBlocksContainer .serviceBlock .popup h3 {
+  margin-bottom: 24px;
+}
+
 
 #serviceBlocksContainer .serviceName {
   text-align: center;

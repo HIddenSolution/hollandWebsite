@@ -45,3 +45,11 @@ details {
 [data-scrollable="false"] {
   overflow: hidden;
 }
+
+div.yolo {
+  width: 100%;
+  height: 240px;
+  margin: 24px 0px;
+  background: black;
+  display: flex;
+}

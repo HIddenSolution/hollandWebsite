@@ -1,8 +1,6 @@
 // 500ms after page loads,
-// clear th
-setTimeout(() => {
-  console.clear();
-}, 500)
+// clear the console
+// setTimeout(console.clear, 500)
 
 const html = document.querySelector('html')
 const menuIcon = document.getElementById('menuIcon')
@@ -71,8 +69,13 @@ function toggleElementScrollable(targetElement) {
 const serviceBlocks = document.querySelectorAll(".serviceBlock")
 
 function openServicePopup(event) {
+  // Grab the element with class="popup" is a child of the serviceBlock
+  // element that was clicked.
   const popupElement = event.currentTarget.querySelector('.popup')
+  // Turn off scrolling on the document's HTML element, since the
+  // popup element will handle its own scrolling.
   toggleElementScrollable(html)
+  // Show the popup element.
   toggleDisplayValue(popupElement)
 }
 
