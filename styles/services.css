@@ -1,4 +1,4 @@
-#serviceBlocksContainer {
+#serviceBlocksContainer .inner {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -12,11 +12,21 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  transition: all 0.23s;
+  transform: scale(1.0);
+}
+
+#serviceBlocksContainer .serviceBlock:hover {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transform: scale(1.05);
 }
 
 #serviceBlocksContainer .serviceBlock img {
   max-width: 100%;
   max-height: 100%;
+  min-height: 100%;
 }
 
 #serviceBlocksContainer .serviceBlock .innerBlock {
@@ -27,29 +37,24 @@
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   width: 100%;
-  height: calc(100% - 4px);
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #serviceBlocksContainer .serviceBlock .popup {
-  height: 100vh;
-  background: var(--white0);
-  padding: 24px 48px;
-  overflow: scroll;
-  z-index: 1000000;
-  position: fixed;
-  top: 0;
-  left: 0;
   display: none;
+}
+
+#serviceBlocksContainer .popup {
+  display: flex;
   flex-direction: column;
 }
 
-#serviceBlocksContainer .serviceBlock .popup h3 {
+#serviceBlocksContainer > .popup h3 {
   margin-bottom: 24px;
 }
-
 
 #serviceBlocksContainer .serviceName {
   text-align: center;
@@ -89,4 +94,9 @@
       "."
       ".";
   }
+}
+
+.viewAllServicesButton {
+  max-width: max-content;
+  margin-top: 24px;
 }

@@ -23,4 +23,5 @@ button {
   height: 56px;
   padding: 8px 16px;
   font-family: var(--fonts0);
+  cursor: pointer;
 }

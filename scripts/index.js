@@ -8,11 +8,14 @@ const activeMenuIcon = document.getElementById('activeMenuIcon')
 const smallScreenNavLinks = document.getElementById("smallScreenNavLinks")
 const allSections = document.querySelectorAll(".sectionContainer")
 const allSmallScreeNavLinkAnchors = document.querySelectorAll("#smallScreenNavLinks a")
+const inner = document.querySelector('#serviceBlocksContainer .inner')
+const serviceBlocks = document.querySelectorAll(".serviceBlock")
+const viewAllServicesButtons = document.querySelectorAll('.viewAllServicesButton')
 
-function toggleDisplayValue (targetElement) {
+function toggleDisplayValue (targetElement, displayValue = "flex") {
   const currentDisplayValue = getComputedStyle(targetElement).display
   const isCurrentlyHidden = currentDisplayValue === 'none'
-  const newValue =  isCurrentlyHidden ? "flex" : "none"
+  const newValue =  isCurrentlyHidden ? displayValue : "none"
   targetElement.style.display = newValue
 }
 
@@ -66,19 +69,34 @@ function toggleElementScrollable(targetElement) {
   targetElement.setAttribute('data-scrollable', newValue)
 }
 
-const serviceBlocks = document.querySelectorAll(".serviceBlock")
-
-function openServicePopup(event) {
-  // Grab the element with class="popup" is a child of the serviceBlock
-  // element that was clicked.
-  const popupElement = event.currentTarget.querySelector('.popup')
-  // Turn off scrolling on the document's HTML element, since the
-  // popup element will handle its own scrolling.
-  toggleElementScrollable(html)
-  // Show the popup element.
-  toggleDisplayValue(popupElement)
+function showServiceDetails(event) {
+  const serviceBlocksContainer = document.querySelector('#serviceBlocksContainer')
+  const popup = event.currentTarget.querySelector('.popup')
+  popup.originalParent = event.currentTarget
+  toggleDisplayValue(popup)
+  toggleDisplayValue(inner, "grid")
+  serviceBlocksContainer.prepend(popup)
 }
 
 serviceBlocks.forEach((serviceBlock) => {
-  serviceBlock.addEventListener('click', openServicePopup)
+  serviceBlock.addEventListener('click', showServiceDetails)
 })
+
+viewAllServicesButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const ancestorPopup = button.closest('.popup')
+    toggleDisplayValue(ancestorPopup)
+    ancestorPopup.originalParent.append(ancestorPopup)
+    toggleDisplayValue(inner, "grid")
+  })
+})
+
+//
+
+//
+
+//
+
+//
+
+// Logic for service block clicking shit.
